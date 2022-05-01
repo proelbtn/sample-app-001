@@ -13,7 +13,7 @@ import javax.inject.Inject
 @HiltViewModel
 class StoreViewModel @Inject constructor(
     private val storeRepository: StoreRepository
-): ViewModel() {
+) : ViewModel() {
     private val _stores = MutableStateFlow(listOf<Store>())
     val stores: StateFlow<List<Store>> = _stores
 
@@ -23,7 +23,6 @@ class StoreViewModel @Inject constructor(
                 .collect {
                     _stores.value = it
                 }
-
         }
     }
 }
