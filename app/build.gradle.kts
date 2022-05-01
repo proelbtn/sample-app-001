@@ -65,6 +65,8 @@ dependencies {
     implementation("com.jakewharton.timber:timber:5.0.1")
 
     implementation("androidx.fragment:fragment-ktx:1.4.1")
+
+    implementation("com.squareup.picasso:picasso:2.71828")
 }
 
 kapt {
