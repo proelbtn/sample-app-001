@@ -25,4 +25,8 @@ class StoreViewModel @Inject constructor(
                 }
         }
     }
+
+    fun findStoreById(id: Int): Store? = stores.value.find {
+        it.id == id
+    }
 }

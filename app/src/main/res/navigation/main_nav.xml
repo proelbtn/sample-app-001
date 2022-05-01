@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/storeListFragment">
+
+    <fragment
+        android:id="@+id/storeListFragment"
+        android:name="com.proelbtn.sampleapp001.StoreListFragment"
+        android:label="StoreListFragment" >
+        <action
+            android:id="@+id/show_detail"
+            app:destination="@id/storeDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/storeDetailFragment"
+        android:name="com.proelbtn.sampleapp001.StoreDetailFragment"
+        android:label="fragment_store_detail"
+        tools:layout="@layout/fragment_store_detail" >
+        <argument
+            android:name="store_id"
+            app:argType="integer" />
+    </fragment>
+</navigation>

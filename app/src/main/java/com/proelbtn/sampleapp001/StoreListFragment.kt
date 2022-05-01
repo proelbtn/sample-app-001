@@ -5,7 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.viewModels
+import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.flowWithLifecycle
 import androidx.lifecycle.lifecycleScope
@@ -20,7 +20,7 @@ import timber.log.Timber
 
 @AndroidEntryPoint
 class StoreListFragment : Fragment() {
-    private val viewModel: StoreViewModel by viewModels()
+    private val viewModel: StoreViewModel by activityViewModels()
     private lateinit var binding: FragmentStoreListBinding
 
     override fun onCreateView(
