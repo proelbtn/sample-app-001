@@ -60,6 +60,8 @@ dependencies {
     implementation("com.squareup.retrofit2:converter-moshi:2.9.0")
 
     implementation("com.jakewharton.timber:timber:5.0.1")
+
+    implementation("androidx.fragment:fragment-ktx:1.4.1")
 }
 
 kapt {
