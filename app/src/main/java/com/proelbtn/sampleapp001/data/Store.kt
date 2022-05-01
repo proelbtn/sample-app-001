@@ -1,4 +1,4 @@
-package com.proelbtn.sampleapp001
+package com.proelbtn.sampleapp001.data
 
 data class Store(
     val id: Int,

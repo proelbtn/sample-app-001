@@ -1,5 +1,6 @@
-package com.proelbtn.sampleapp001
+package com.proelbtn.sampleapp001.di
 
+import com.proelbtn.sampleapp001.api.StoreService
 import com.squareup.moshi.Moshi
 import dagger.Module
 import dagger.Provides
@@ -9,19 +10,19 @@ import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
 import retrofit2.create
 
-@Module
 @InstallIn(SingletonComponent::class)
-class Module {
+@Module
+class NetworkModule {
     @Provides
-    fun moshi(): Moshi = Moshi.Builder()
+    fun provideMoshi(): Moshi = Moshi.Builder()
         .build()
 
     @Provides
-    fun retrofit(moshi: Moshi): Retrofit = Retrofit.Builder()
+    fun provideRetrofit(moshi: Moshi): Retrofit = Retrofit.Builder()
         .addConverterFactory(MoshiConverterFactory.create(moshi))
         .baseUrl("https://fakestoreapi.com")
         .build()
 
     @Provides
-    fun storeDataStore(retrofit: Retrofit): StoreDataStore = retrofit.create()
+    fun provideStoreDataStore(retrofit: Retrofit): StoreService = retrofit.create()
 }

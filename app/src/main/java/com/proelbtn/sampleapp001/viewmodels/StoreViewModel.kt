@@ -1,7 +1,9 @@
-package com.proelbtn.sampleapp001
+package com.proelbtn.sampleapp001.viewmodels
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.proelbtn.sampleapp001.data.Store
+import com.proelbtn.sampleapp001.data.StoreRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
